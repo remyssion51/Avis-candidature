@@ -10,13 +10,13 @@ page = st.sidebar.radio("Navigation", ["Laisser un commentaire", "Espace privé 
 # --- PAGE 1 : Formulaire de feedback ---
 if page == "Laisser un commentaire":
     st.title("💬 Laissez un commentaire sur la candidature")
-    st.write("Merci de prendre un moment pour partager votre avis sur la candidature de [Ton Nom].")
+    st.write("Merci de prendre un moment pour m'aider à améliorer ma candidature.")
 
     with st.form("feedback_form"):
         nom = st.text_input("👤 Votre nom ou fonction (optionnel)")
         entreprise = st.text_input("🏢 Nom de l’entreprise (optionnel)")
         note = st.slider("⭐ Évaluation de la candidature", 1, 5, 3)
-        commentaire = st.text_area("📝 Votre commentaire", placeholder="Exemple : Le profil correspond bien au poste...")
+        commentaire = st.text_area("📝 Votre commentaire", placeholder="Exemple : Parler de ce qui pourrait être amélioré...")
         date = datetime.date.today()
 
         submit = st.form_submit_button("Envoyer le commentaire")
